@@ -62,11 +62,18 @@ namespace GenericCollectionsExample
             // GOOD - no boxing/unboxing
             // GOOD - type-safe
 
-            List<int> myList = new List<int>();
+            List<int> myList = new List<int>(3);
+            Console.WriteLine(myList.Capacity);
+
             myList.Add(10);
+            Console.WriteLine(myList.Capacity);
+
             myList.Add(20);
             myList.Add(30);
             myList.Add(40);
+
+            myList.Add(50);
+            Console.WriteLine(myList.Capacity);
 
             //myList.Add("hello");
 
